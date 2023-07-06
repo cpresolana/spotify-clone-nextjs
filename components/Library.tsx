@@ -30,10 +30,10 @@ const Library: React.FC<LibraryProps> = ({
     if (!user) {
       return authModal.onOpen();
     }
-
-    if (!subscription) {
+    // TODO subscription stripe integration
+    /* if (!subscription) {
       return subscribeModal.onOpen();
-    }
+    } */
 
     return uploadModal.onOpen();
   }

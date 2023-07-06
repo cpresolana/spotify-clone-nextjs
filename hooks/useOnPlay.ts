@@ -16,9 +16,10 @@ const useOnPlay = (songs: Song[]) => {
       return authModal.onOpen();
     }
 
-    if (!subscription) {
+    // TODO subscription stripe integration
+    /* if (!subscription) {
       return subscribeModal.onOpen();
-    }
+    } */
 
     player.setId(id);
     player.setIds(songs.map((song) => song.id));

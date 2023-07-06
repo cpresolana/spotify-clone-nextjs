@@ -44,7 +44,9 @@ export const MyUserContextProvider = (props: Props) => {
       .single();
 
   useEffect(() => {
-    if (user && !isLoadingData && !userDetails && !subscription) {
+    
+    // TODO subscription stripe integration
+    if (user && !isLoadingData && !userDetails /* && !subscription */) {
       setIsloadingData(true);
       Promise.allSettled([getUserDetails(), getSubscription()]).then(
         (results) => {
